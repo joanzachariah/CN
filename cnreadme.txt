@@ -96,3 +96,31 @@ udp scanning
 quick scan plus
 quick traceroute
 icmp and arp scans with traceroute: -sn -PE -PP --traceroute
+
+------------------------------------------
+
+VLAN: go to switch1 and cli
+
+VLAN 
+enable  
+config t  
+vlan 20 
+name purchase  
+exit 
+vlan 30  
+name sales  
+exit 
+int fa0/2 
+switchport access vlan 20  
+exit 
+int fa0/3 
+switchport access vlan 20  
+exit 
+int fa0/4 
+switchport access vlan 30  
+exit 
+int fa0/5 
+switchport access vlan 30  
+exit
+
+
